@@ -39,10 +39,14 @@ function firstQuestion() {
         imageAlt: 'Custom image',
         confirmButtonText: CONFIG.btnIntro
     }).then(function() {
+        loadSound();
         $('.content').show(200);
     })
 }
-
+function loadSound() {
+    let audio = new Audio('sound/sound.mp3');
+    audio.play();
+}
 // switch button position
 function switchButton() {
     var audio = new Audio('sound/duck.mp3');
