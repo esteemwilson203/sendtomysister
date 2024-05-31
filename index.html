@@ -14,9 +14,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body onload="">
-<audio id="audioElement" src="sound/sound.mp3" preload="auto"></audio>
-<button id="playButton"></button>
+<body onload="loadSound()">
+<audio id="audioElement" src="sound/sound.mp3"></audio>
     <div class="wrapper">
         <!-- Preloader -->
         <div id="preloader">
@@ -32,9 +31,10 @@
         <div class="content">
             <header>
                 <h2 id="title"></h2>
-                <h4 id="desc"></h4>
+x                <h4 id="desc"></h4>
             </header>
-            <button id="yes" type="button" style="background-color: #53d70d !important;" class="btn btn-danger btn-lg"> </button>
+
+            <button id="yes" type="button" style="background-color: aqua !important;" class="btn btn-danger btn-lg"> </button>
             <button id="no" type="button" style="background-color: red !important;" class="btn btn-info btn-lg"></button>
         </div>
     </div>
@@ -52,13 +52,6 @@
             let audio = new Audio('sound/sound.mp3');
             audio.play();
         }
-        window.addEventListener('DOMContentLoaded', (event) => {
-            let audio = document.getElementById('audioElement');
-            audio.play().catch(error => {
-                console.error('Error playing sound:', error);
-            });
-        });
-
     </script>
 </body>
 
